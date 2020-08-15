@@ -59,7 +59,7 @@ const SidebarSectionWrapper = styled.nav`
   }
 `;
 
-const SectionTitle = styled(Link)<any>`
+const SectionTitle = styled.a<any>`
   display: block;
   width: calc(100% - 20px);
   margin: 2px 10px 0px 10px;
@@ -99,7 +99,7 @@ const SectionItemWrapper = styled.li`
   }
 `;
 
-const SectionItem = styled(Link)<any>`
+const SectionItem = styled.a<any>`
   display: block;
   padding: 0 0 0 10px;
   width: calc(100% - 10px);

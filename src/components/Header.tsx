@@ -34,7 +34,7 @@ class HeaderWrapper extends React.Component {
           <HeaderTitleGroupWrapper>
             {header.topics.map((element, index) => (
               <HeaderTitleWrapper key={index}>
-                <HeaderTitle title={element.title}>{element.name}</HeaderTitle>
+                <HeaderTitle to={element.url} title={element.title}>{element.name}</HeaderTitle>
               </HeaderTitleWrapper>
             ))}
           </HeaderTitleGroupWrapper>

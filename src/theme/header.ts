@@ -7,6 +7,7 @@ import styled from "styled-components";
 import header from "../config/headerConfig";
 import sidebar from "../config/sidebarConfig";
 import { primaryDark, primaryLight } from "../config/colors";
+import {Link} from "react-router-dom"
 
 const Header = styled.header`
   position: fixed;
@@ -33,9 +34,10 @@ const HeaderTitleWrapper = styled.li`
   width: calc((100vw - ${sidebar.width}px) / ${header.topics.length} - (${header.topics.length} * 5px));
 `;
 
-const HeaderTitle = styled.a<any>`
+const HeaderTitle = styled(Link)<any>`
   cursor: pointer;
   color: ${primaryLight};
+  text-decoration: none;
   display: block;
   width: 100%;
   height: 100%;
@@ -44,6 +46,7 @@ const HeaderTitle = styled.a<any>`
   justify-content: center;
   letter-spacing: 1px;
   transition: all 0.25s ease-in-out;
+  font-size: ${header.height / 4}px;
 
   &:hover {
     font-weight: 700;
