@@ -6,7 +6,12 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import HeaderWrapper from "../components/Header";
-import Content from "../components/Content";
+
+import {
+  ContentWrapper,
+  InnerContentDecorationWrapper,
+  InnerContentWrapper,
+} from "../theme/content";
 
 import {
   Sidebar,
@@ -19,12 +24,12 @@ import {
   LanguageSelector,
 } from "../theme/sidebar";
 
-class DocPage extends React.Component<{}, {theme: string}> {
+class DocPage extends React.Component<{}, { theme: string }> {
   constructor(props: {}) {
-    super(props)
+    super(props);
     this.state = {
-      theme: this.getTheme()
-    }
+      theme: this.getTheme(),
+    };
   }
 
   getTheme() {
@@ -38,9 +43,12 @@ class DocPage extends React.Component<{}, {theme: string}> {
   }
 
   switchTheme = () => {
-    this.setState({theme: this.state.theme === "dark" ? "light" : "dark"});
-    localStorage.setItem("theme", this.state.theme === "dark" ? "light" : "dark");
-  }
+    this.setState({ theme: this.state.theme === "dark" ? "light" : "dark" });
+    localStorage.setItem(
+      "theme",
+      this.state.theme === "dark" ? "light" : "dark"
+    );
+  };
 
   render() {
     return (
@@ -65,7 +73,10 @@ class DocPage extends React.Component<{}, {theme: string}> {
           {/* <ThemeSwitch onClick={this.switchTheme} />
           <LanguageSelector src="/public/assets/lang/english_us_uk.svg" alt="" /> */}
         </Sidebar>
-        <Content />
+        <ContentWrapper>
+          <InnerContentDecorationWrapper />
+          <InnerContentWrapper></InnerContentWrapper>
+        </ContentWrapper>
       </ThemeProvider>
     );
   }

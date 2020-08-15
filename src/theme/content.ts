@@ -6,7 +6,7 @@
 import styled, { keyframes } from "styled-components";
 import header from "../config/headerConfig";
 import sidebar from "../config/sidebarConfig";
-import { primaryDark, primaryLight } from "../config/colors";
+import { primaryDark, primaryLight, accentLight } from "../config/colors";
 
 import { Link } from "react-router-dom";
 
@@ -28,9 +28,25 @@ const ContentWrapper = styled.div`
   top: ${header.height}px;
   background-color: ${primaryDark};
   width: calc(100% - ${sidebar.width}px);
-  height: calc(200vh - ${header.height}px);
+  height: calc(100vh - ${header.height}px);
   user-select: none;
   animation: ${IntroAnimation} 0.5s;
+  overflow: auto;
+  margin: 0 5px 0 0;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: ${primaryDark};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${accentLight};
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: ${accentLight};
+  }
 `;
 
 const InnerContentDecorationWrapper = styled.div`
