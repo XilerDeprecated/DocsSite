@@ -9,10 +9,13 @@ import sidebar from "../config/sidebarConfig";
 import { primaryDark, primaryLight } from "../config/colors";
 
 const Header = styled.header`
+  position: fixed;
+  z-index: 100;
   background-color: ${primaryDark};
   width: calc(100vw - ${sidebar.width}px);
   height: ${header.height}px;
   margin-left: ${sidebar.width}px;
+  user-select: none;
 `;
 
 const HeaderTitleGroupWrapper = styled.ul`

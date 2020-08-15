@@ -5,6 +5,9 @@
 */
 const sidebar = {
   width: 200,
+  bottom: {
+    height: 40,
+  }
 };
 
 export default sidebar;

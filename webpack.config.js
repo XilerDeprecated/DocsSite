@@ -29,6 +29,22 @@ module.exports = {
         exclude: /node_modules/,
         use: ["file-loader?name=[name].[ext]"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        loader: "file-loader",
+        query: {
+          outputPath: "./assets/",
+          name: "[name].[ext]?[hash]",
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        loader: "file-loader",
+        query: {
+          outputPath: "./assets/lang/",
+          name: "[name].[ext]?[hash]",
+        },
+      },
     ],
   },
   devServer: {

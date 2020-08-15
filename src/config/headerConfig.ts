@@ -11,16 +11,16 @@ const header = {
       title: "The Xiler python utility library.",
       url: "/utilsx/"
     },
-    {
-      name: "Api",
-      title: "The Xiler python utility library.",
-      url: "/utilsx/"
-    },
-    {
-      name: "Community Bot",
-      title: "The Xiler python utility library.",
-      url: "/utilsx/"
-    }
+    // {
+    //   name: "Api",
+    //   title: "The Xiler python utility library.",
+    //   url: "/utilsx/"
+    // },
+    // {
+    //   name: "Community Bot",
+    //   title: "The Xiler python utility library.",
+    //   url: "/utilsx/"
+    // }
   ]
 };
 

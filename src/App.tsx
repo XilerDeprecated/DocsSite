@@ -18,7 +18,7 @@ import "./css/body.css"
 const Layout = lazy(() => import("./layouts/Layout"));
 
 // Pages:
-const HomePage = lazy(() => import("./pages/"));
+const DocPage = lazy(() => import("./pages/"));
 
 function loadingComponent() {
   return (
@@ -44,11 +44,11 @@ class App extends React.Component {
               path="/"
               render={() => (
                 <Layout title="Home">
-                  <HomePage />
+                  <DocPage />
                 </Layout>
               )}
             />
-            <Redirect to="/404" />
+            <Redirect to="/" />
           </Switch>
         </Suspense>
       </Router>

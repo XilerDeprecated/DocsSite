@@ -13,4 +13,12 @@ const primaryDark = theme("mode", {
   dark: "#27292a",
 });
 
-export { primaryDark, primaryLight };
+const secondaryDark = theme("mode", {
+  dark: "#313335"
+})
+
+const accentLight = theme("mode", {
+  dark: "#2bbade",
+});
+
+export { primaryDark, secondaryDark, primaryLight, accentLight };
