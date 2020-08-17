@@ -1,17 +1,25 @@
 {
   "presets": [
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ],
     "@babel/preset-typescript",
     "@babel/preset-react"
   ],
   "plugins": [
+    "@babel/plugin-transform-runtime",
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread",
     [
       "babel-plugin-styled-components",
       {
-        "displayName": true,
-        "fileName": true,
+        "displayName": false,
+        "fileName": false,
         "minify": true,
         "transpileTemplateLiterals": true,
         "pure": true,
