@@ -5,6 +5,7 @@
 */
 import React from "react";
 import { Helmet } from "react-helmet";
+import HeaderWrapper from "../components/Header";
 
 const Layout = ({ children, title }: { children: JSX.Element; title: string }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children, title }: { children: JSX.Element; title: string }) =
       <Helmet>
         <title>{`Xiler Documentation | ${title}`}</title>
       </Helmet>
+      <HeaderWrapper />
       {children}
     </React.Fragment>
   );

@@ -8,8 +8,6 @@ import header from "../config/headerConfig";
 import sidebar from "../config/sidebarConfig";
 import { primaryDark, primaryLight, accentLight } from "../config/colors";
 
-import { Link } from "react-router-dom";
-
 const IntroAnimation = keyframes`
   from {
     z-index: 1000;
@@ -106,6 +104,9 @@ const SectionItem = styled.a<any>`
   height: 100%;
   color: ${primaryLight};
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: ${sidebar.width / 12}px;
 `;
 

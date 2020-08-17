@@ -10,6 +10,7 @@ import {
   primaryDark,
   primaryLight,
   accentLight,
+  secondaryLight,
   secondaryDark,
 } from "../config/colors";
 
@@ -29,7 +30,7 @@ const ContentWrapper = styled.div`
   position: absolute;
   left: ${sidebar.width}px;
   top: ${header.height}px;
-  background-color: ${primaryDark};
+  background-color: ${primaryLight};
   width: calc(100% - ${sidebar.width}px);
   height: calc(100vh - ${header.height}px);
   animation: ${IntroAnimation} 0.5s;
@@ -71,7 +72,6 @@ const InnerContentDecorationWrapper = styled.div`
 
 const InnerContentWrapper = styled.div`
   position: relative;
-  background-color: ${primaryLight};
   width: 100%;
   min-height: 100%;
 `;
@@ -94,16 +94,43 @@ const ContentSubTitle = styled.h4<any>`
   padding: 15px 0;
 `;
 
-const ContentParagraph = styled.p`
-  color: ${secondaryDark};
-  max-width: 800px;
+const ContentParagraphWrapper = styled.div`
+  max-width: 1000px;
   width: 80%;
   margin: 15px auto 30px auto;
+
+  pre {
+    border-radius: 5px;
+  }
+
+  code span.react-syntax-highlighter-line-number {
+    user-select: none;
+  }
+`;
+
+const ContentParagraph = styled.p`
+  color: ${secondaryDark};
 
   a {
     color: ${accentLight};
     text-decoration: none;
   }
+`;
+
+const ContentBlock = styled.span`
+  display: block;
+  background-color: ${secondaryDark};
+  color: ${primaryLight};
+  padding: 10px;
+  margin: 3px 0;
+  width: 100%;
+  border-radius: 5px;
+`;
+
+const ContentDarker = styled.span`
+  color: ${secondaryLight};
+  font-size: 80%;
+  opacity: 0.8;
 `;
 
 export {
@@ -113,4 +140,7 @@ export {
   ContentTitle,
   ContentSubTitle,
   ContentParagraph,
+  ContentParagraphWrapper,
+  ContentBlock,
+  ContentDarker,
 };

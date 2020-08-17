@@ -9,7 +9,7 @@ const header = {
     {
       name: "UtilsX",
       title: "The Xiler python utility library.",
-      url: "/utilsx/"
+      url: "/utilsx"
     },
     // {
     //   name: "Api",
