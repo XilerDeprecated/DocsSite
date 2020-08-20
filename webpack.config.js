@@ -56,6 +56,7 @@ module.exports = {
       template: "./public/index.html",
       favicon: "./public/favicon.ico",
     }),
+    // WDS bug prevention while developing: Comment the following lines.
     new CopyPlugin({
       patterns: [
         { from: 'public/', to: '' }

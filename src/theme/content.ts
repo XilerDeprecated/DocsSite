@@ -3,7 +3,7 @@
  Xiler is under a CC0-1.0 License (View the license here: https://legal.xiler.net/license)
  By proceeding to this site you agree with our ToS. (View the tos here: https://legal.xiler.net/tos)
 */
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import header from "../config/headerConfig";
 import sidebar from "../config/sidebarConfig";
 import {
@@ -108,7 +108,7 @@ const ContentParagraphWrapper = styled.div`
   }
 `;
 
-const ContentParagraph = styled.p`
+const ContentParagraph = styled.div`
   color: ${secondaryDark};
 
   a {
@@ -123,14 +123,50 @@ const ContentBlock = styled.span`
   color: ${primaryLight};
   padding: 10px;
   margin: 3px 0;
-  width: 100%;
+  width: calc(100% - 20px);
   border-radius: 5px;
 `;
 
-const ContentDarker = styled.span`
-  color: ${secondaryLight};
+const ContentDarker = styled.span<any>`
+  ${(props) =>
+    props.dark
+      ? css`
+          color: ${secondaryDark};
+        `
+      : css`
+          color: ${secondaryLight};
+        `}
   font-size: 80%;
   opacity: 0.8;
+`;
+
+const ContentArgsWrapper = styled.ul`
+  position: relative;
+  margin-left: 30px;
+`;
+
+const ContentFuncWrapper = styled.ul`
+  position: relative;
+  list-style: none;
+
+  li {
+    .function {
+      background-color: ${secondaryLight};
+      padding: 3px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+
+    p, .desc {
+      margin: 0 0 0 20px;
+    }
+
+    margin: 0 0 15px 0;
+
+    ul li {
+      margin: 0;
+    }
+  }
 `;
 
 export {
@@ -143,4 +179,6 @@ export {
   ContentParagraphWrapper,
   ContentBlock,
   ContentDarker,
+  ContentArgsWrapper,
+  ContentFuncWrapper,
 };
