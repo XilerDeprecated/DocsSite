@@ -1135,7 +1135,7 @@ class UtilsX extends React.Component<any, any> {
                   <br />
                   <br />
                   <strong>
-                    NOTE: Some CLI's may not support this formatting.
+                    NOTE: Some CLI's may not support some formatting.
                   </strong>
                   <br />
                   <br />
@@ -1164,7 +1164,7 @@ class UtilsX extends React.Component<any, any> {
                   <br />
                   <br />
                   <strong>
-                    NOTE: Some CLI's may not support colors.
+                    NOTE: Some CLI's may not support some  colors.
                   </strong>
                   <br />
                   <br />
@@ -1200,7 +1200,7 @@ class UtilsX extends React.Component<any, any> {
                   <br />
                   <br />
                   <strong>
-                    NOTE:  Some CLI's may not support background colors.
+                    NOTE:  Some CLI's may not support some background colors.
                   </strong>
                   <br />
                   <br />
