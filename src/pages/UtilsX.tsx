@@ -571,7 +571,7 @@ class UtilsX extends React.Component<any, any> {
                           <h4>Returns:</h4>
                           <ContentArgsWrapper>
                             <li>
-                              ({pyTypes.discordMessage}) - The message that was
+                              {pyTypes.discordMessage} - The message that was
                               sent.
                             </li>
                           </ContentArgsWrapper>
@@ -646,7 +646,7 @@ class UtilsX extends React.Component<any, any> {
                           <h4>Returns:</h4>
                           <ContentArgsWrapper>
                             <li>
-                              ({pyTypes.discordMessage}) - The message that was
+                              {pyTypes.discordMessage} - The message that was
                               sent.
                             </li>
                           </ContentArgsWrapper>
