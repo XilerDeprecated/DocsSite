@@ -391,7 +391,7 @@ class UtilsX extends React.Component<any, any> {
                           unload_extensions(extensions)
                         </div>
                         <div className="desc">
-                          Loads/unloads all extensions from a list
+                          Loads/unloads all extensions from a list, yields nothing for each extension.
                           <br />
                           <br />
                           <h4>Parameters:</h4>
