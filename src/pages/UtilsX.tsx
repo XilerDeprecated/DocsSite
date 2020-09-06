@@ -391,7 +391,8 @@ class UtilsX extends React.Component<any, any> {
                           unload_extensions(extensions)
                         </div>
                         <div className="desc">
-                          Loads/unloads all extensions from a list, yields nothing for each extension.
+                          Loads/unloads all extensions from a list, yields
+                          nothing for each extension.
                           <br />
                           <br />
                           <h4>Parameters:</h4>
@@ -641,6 +642,11 @@ class UtilsX extends React.Component<any, any> {
                               <b>fields</b> (List[{pyTypes.field}]) - A list (up
                               to 25) objects that will format the embed fields.
                             </li>
+                            <li>
+                              <b>get_embed</b> ({pyTypes.bool}) - If this
+                              boolean is set to true it will return the
+                              generated embed object.
+                            </li>
                           </ContentArgsWrapper>
                           <br />
                           <h4>Returns:</h4>
@@ -648,6 +654,9 @@ class UtilsX extends React.Component<any, any> {
                             <li>
                               {pyTypes.discordMessage} - The message that was
                               sent.
+                            </li>
+                            <li>
+                              {pyTypes.discordEmbed} - The discord.py embed object if <code>get_embed</code> is set to true.
                             </li>
                           </ContentArgsWrapper>
                         </div>
@@ -1163,9 +1172,7 @@ class UtilsX extends React.Component<any, any> {
                   Enum for console color codes.
                   <br />
                   <br />
-                  <strong>
-                    NOTE: Some CLI's may not support some  colors.
-                  </strong>
+                  <strong>NOTE: Some CLI's may not support some colors.</strong>
                   <br />
                   <br />
                   Example:
@@ -1200,7 +1207,7 @@ class UtilsX extends React.Component<any, any> {
                   <br />
                   <br />
                   <strong>
-                    NOTE:  Some CLI's may not support some background colors.
+                    NOTE: Some CLI's may not support some background colors.
                   </strong>
                   <br />
                   <br />
