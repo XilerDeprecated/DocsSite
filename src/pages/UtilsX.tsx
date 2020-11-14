@@ -286,11 +286,19 @@ class UtilsX extends React.Component<any, any> {
                 <ContentSubTitle id="discord.BotX">BotX</ContentSubTitle>
                 <ContentParagraphWrapper>
                   <ContentBlock>
-                    <ContentDarker>class</ContentDarker> utilsx.discord.BotX():
+                    <ContentDarker>class</ContentDarker> utilsx.discord.BotX:
                   </ContentBlock>
                   <ContentParagraph>
                     The shorter way to create a discord.py bot instance. This
                     also includes a few extra default functions. <br />
+                    <br />
+                    <h4>Parameters:</h4>
+                    <ContentArgsWrapper>
+                      <li>
+                        <b>intents</b> {pyTypes.discordIntent} - The discord
+                        intents object that will be applied.
+                      </li>
+                    </ContentArgsWrapper>
                     <br />
                     <h4>Attributes:</h4>
                     <ContentArgsWrapper>
