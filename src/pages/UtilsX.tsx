@@ -59,6 +59,7 @@ const pyTypes = {
   discordMessage: <a href="https://discordpy.readthedocs.io/en/latest/api.html#discord.Message" target="_blanc">discord.Message</a>,
   discordColor: <a href="https://discordpy.readthedocs.io/en/latest/api.html#discord.Colour" target="_blanc">discord.Color</a>,
   discordAllowedMentions: <a href="https://discordpy.readthedocs.io/en/latest/api.html#discord.AllowedMentions" target="_blanc">discord.AllowedMentions</a>,
+  discordIntent: <a href="https://discordpy.readthedocs.io/en/latest/api.html#discord.Intents" target="_blanc">discord.Intents</a>,
   cog: <a href="https://discordpy.readthedocs.io/en/latest/ext/commands/api.html?highlight=cog#discord.ext.commands.Cog" target="_blanc">Cog</a>,
   callable: <a href="https://en.wikibooks.org/wiki/Python_Programming/Functions#:~:text=A%20callable%20object%20is%20an,classes%20or%20certain%20class%20instances." target="_blanc">callable</a>,
   datetime: <a href="https://docs.python.org/3/library/datetime.html#datetime-objects" target="_blanc">datetime</a>,
@@ -138,31 +139,15 @@ class UtilsX extends React.Component<any, any> {
             <React.Fragment>
               <SectionTitle href="#discord">Discord</SectionTitle>
               <SectionWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#discord.BotX" title="BotX">
-                    BotX
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#discord.Cog" title="Cog">
-                    Cog
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#discord.Exceptions" title="Exceptions">
-                    Exceptions
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#discord.Objects" title="Objects">
-                    Objects
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#discord.Handlers" title="Handlers">
-                    Handlers
-                  </SectionItem>
-                </SectionItemWrapper>
+                {["BotX", "Cog", "Exceptions", "Objects", "Handlers"].map(
+                  (item: string) => (
+                    <SectionItemWrapper>
+                      <SectionItem href={`#discord.${item}`} title={item}>
+                        {item}
+                      </SectionItem>
+                    </SectionItemWrapper>
+                  )
+                )}
               </SectionWrapper>
             </React.Fragment>
             {/* Console */}
@@ -178,26 +163,6 @@ class UtilsX extends React.Component<any, any> {
                     </SectionItemWrapper>
                   )
                 )}
-                {/* <SectionItemWrapper>
-                  <SectionItem href="#console.Prettier" title="Prettier">
-                    Prettier
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#console.Formats" title="Formats">
-                    Formats
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#console.Colors" title="Colors">
-                    Colors
-                  </SectionItem>
-                </SectionItemWrapper>
-                <SectionItemWrapper>
-                  <SectionItem href="#console.Backgrounds" title="Backgrounds">
-                    Backgrounds
-                  </SectionItem>
-                </SectionItemWrapper> */}
               </SectionWrapper>
             </React.Fragment>
           </SidebarSectionWrapper>
@@ -342,6 +307,10 @@ class UtilsX extends React.Component<any, any> {
                         <b>case_insensitive</b> ({pyTypes.bool}) - If the bot
                         will reply to all commands or only the case correct
                         commands, default is True. (replies to all)
+                      </li>
+                      <li>
+                        <b>intent</b> ({pyTypes.discordIntent}) - The discord
+                        intents object that will be applied.
                       </li>
                     </ContentArgsWrapper>
                     <ContentFuncWrapper>
