@@ -169,7 +169,16 @@ class UtilsX extends React.Component<any, any> {
             <React.Fragment>
               <SectionTitle href="#console">Console</SectionTitle>
               <SectionWrapper>
-                <SectionItemWrapper>
+                {["Prettier", "Formats", "Colors", "Backgrounds"].map(
+                  (item: string) => (
+                    <SectionItemWrapper>
+                      <SectionItem href={`#console.${item}`} title={item}>
+                        {item}
+                      </SectionItem>
+                    </SectionItemWrapper>
+                  )
+                )}
+                {/* <SectionItemWrapper>
                   <SectionItem href="#console.Prettier" title="Prettier">
                     Prettier
                   </SectionItem>
@@ -188,7 +197,7 @@ class UtilsX extends React.Component<any, any> {
                   <SectionItem href="#console.Backgrounds" title="Backgrounds">
                     Backgrounds
                   </SectionItem>
-                </SectionItemWrapper>
+                </SectionItemWrapper> */}
               </SectionWrapper>
             </React.Fragment>
           </SidebarSectionWrapper>
@@ -656,7 +665,8 @@ class UtilsX extends React.Component<any, any> {
                               sent.
                             </li>
                             <li>
-                              {pyTypes.discordEmbed} - The discord.py embed object if <code>get_embed</code> is set to true.
+                              {pyTypes.discordEmbed} - The discord.py embed
+                              object if <code>get_embed</code> is set to true.
                             </li>
                           </ContentArgsWrapper>
                         </div>
