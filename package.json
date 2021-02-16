@@ -22,7 +22,7 @@
     "@types/react-syntax-highlighter": "^13.5.0",
     "@types/styled-components": "^5.1.2",
     "@types/styled-theming": "^2.2.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
     "file-loader": "^6.0.0",
